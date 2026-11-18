@@ -1,0 +1,30 @@
+name: Comprobar la base del proyecto
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  pruebas:
+    name: Pruebas con Python ${{ matrix.python }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.11", "3.12"]
+    steps:
+      - name: Obtener el repositorio
+        uses: actions/checkout@v4
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Comprobar la configuración y el esquema en memoria
+        run: python main.py --comprobar
+      - name: Ejecutar las pruebas de infraestructura
+        run: python -m unittest discover -s tests -t . -v
+      - name: Comprobar espacios y finales de línea
+        run: git diff-tree --check HEAD
