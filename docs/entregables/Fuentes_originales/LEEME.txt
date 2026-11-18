@@ -1,0 +1,2 @@
+Documentos fuente conservados sin alteración. Son material de consulta e historial de trabajo.
+El alcance vigente y los criterios consolidados están en E1 y E2. Los estados literales R/C y RF-12 de análisis anteriores no rigen esta versión.

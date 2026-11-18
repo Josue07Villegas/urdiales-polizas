@@ -1,5 +1,7 @@
 # Análisis y diseño propuestos
 
+El contenido consolidado según la actividad está en [E2](../entregables/E2/E2_AlfaConsultora_Analisis_Diseno.docx). Esta carpeta conserva las fuentes de los diseños y su catálogo inicial; consulta el [índice de entregables](../entregables/LEEME.md) para la organización vigente.
+
 Versión de trabajo del 17 de noviembre de 2026. Estos diseños son una base para E2 y para el capítulo 3 del informe técnico. No acreditan validación ni firma de la empresa.
 
 - [Documento de diseños en Word](Disenos_Urdiales_v1.docx).

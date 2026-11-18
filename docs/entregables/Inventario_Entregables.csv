@@ -1,0 +1,18 @@
+﻿Entrega,Requisito,Ubicación,Estado
+E1,Campos del Anexo A,E1/E1_AlfaConsultora_Propuesta,"Preparados; tamaño, contacto y visto bueno pendientes"
+E1,Carta de validación,Anexos/Carta_Membretada_Validacion_Alcance_Urdiales,Formato completado; firma o confirmación institucional pendiente
+E2,Guion y minuta,Anexos/Guion_Entrevista_Validacion; Anexos/Minuta_Primera_Sesion_Urdiales_Alcance_Acotado,Guion consolidado y minuta; firma pendiente
+E2,11 RF y 5 RNF con MoSCoW,E2 secciones 2 y 2 1,Documentados; validación pendiente
+E2,Seis historias y criterios Dado/Cuando/Entonces,E2 sección 3,Actualizadas sin flujo literal R/C
+E2,Tres casos detallados y matriz,E2 secciones 4 y 5,Documentados; clases de negocio por implementar
+E2,UML e imágenes editables,E2 anexo gráfico; E4/PF_AlfaConsultora_UML.zip,Propuestos; actualizar para coincidir con código
+E3,Demo de diez minutos y 60 % Must,E3_y_E4/Guion_Revision_Presentacion_Video,Pendiente; se requieren al menos siete de once RF Must completos
+E4,Informe de 15 a 25 páginas sin anexos,E4/PF_AlfaConsultora_Informe,"Avance; completar implementación, resultados y conclusiones individuales"
+E4,Seis referencias y dos académicas,Informe sección 2 y Referencias,"Seis referencias técnicas/académicas verificadas, incluidas dos académicas"
+E4,Seis fichas de paradigma,Informe sección 4,Estructurado y declarativo parciales; las demás pendientes de código real
+E4,Manual de 3 a 6 páginas con capturas,E4/PF_AlfaConsultora_Manual,Manual inicial; capturas y operación completa pendientes
+E4,Cinco escenarios; tres al azar en presentación,E2 sección 5 1 y 5 2; Informe sección 5,Definidos con datos concretos; no ejecutados en la aplicación
+E4,Código y al menos 300 registros,Repositorio de la solución,Esqueleto disponible; funciones y datos suficientes pendientes
+E4,Presentación PDF y video de cinco minutos máximo,Guion E3_y_E4,Guion preparado; diapositivas y video pendientes
+E4,Resumen impreso y acta por duplicado,E4/PF_AlfaConsultora_Resumen_Ejecutivo; Anexos/Acta_Entrega_Aceptacion,Resumen preparado; acta en blanco para la presentación
+Anexos,Bitácora breve de IA,Anexos/Bitacora_Uso_IA,Registro preparado; completar revisores y modificaciones humanas

@@ -2,10 +2,12 @@
 
 Resumen de la guía Proyecto Integrador de Paradigmas v2 Lite proporcionada al equipo. Revisar las fechas oficiales y la rúbrica antes de cada entrega.
 
+Los documentos editables organizados y sus versiones PDF se encuentran en [entregables/](entregables/LEEME.md). El [inventario](entregables/Inventario_Entregables.csv) distingue contenido preparado, validación pendiente y evidencia que depende del sistema terminado.
+
 | Entrega | Contenido principal | Relación con este repositorio |
 | --- | --- | --- |
-| E1 · semana 1 · 5 % | Propuesta, consultora, empresa, problema, alcance, paradigmas y carta de validación | Contexto en README y alcance; carta y aprobación pendientes de reunir |
-| E2 · semana 3 · 20 % | Componente 1: análisis, requerimientos, historias, UML y trazabilidad | Base en `docs/diseno/`; falta integrar y validar el conjunto |
+| E1 · semana 1 · 5 % | Propuesta, consultora, empresa, problema, alcance, paradigmas y carta de validación | Propuesta integrada; firma de carta y visto bueno pendientes |
+| E2 · semana 3 · 20 % | Componente 1: análisis, requerimientos, historias, UML y trazabilidad | Documento integrado; validar contenido, obtener firma y alinear con el código al implementar |
 | E3 · semana 5 · 10 % | Demostración de al menos 60 % de requisitos Must | Esta estructura inicial todavía no alcanza ese avance |
 | E4 · semana 6 · 65 % | Entrega formal y presentación | Código, informe, UML, manual, presentación y video por completar |
 
@@ -22,7 +24,7 @@ Resumen de la guía Proyecto Integrador de Paradigmas v2 Lite proporcionada al e
 
 El diseño vigente conserva 11 RF y 5 RNF. La exportación a Excel y las funciones de respaldo y restauración de datos no son obligatorias en la guía y están excluidas del alcance. El video de respaldo de la demostración sí es obligatorio como parte del paquete final.
 
-Los diseños copiados contienen una propuesta de gran parte del diseño, pero no sustituyen las historias completas actualizadas ni la evidencia de entrevista validada.
+E2 integra seis historias actualizadas, tres casos detallados, cinco escenarios y las fuentes UML existentes. La evidencia firmada y la correspondencia con clases implementadas permanecen pendientes.
 
 ## Informe técnico final
 

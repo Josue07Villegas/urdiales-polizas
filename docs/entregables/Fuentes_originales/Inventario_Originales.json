@@ -1,0 +1,17 @@
+[
+  {
+    "archivo": "output/analisis/Base_Analisis_Urdiales_2026-11-17.docx",
+    "copia": "Fuentes_originales/Base_Analisis_Urdiales_2026-11-17.docx",
+    "sha256": "4a20d814db809ea71283e8b9e3eca4fbf519cca5fe8e172d162e3f8e52769753"
+  },
+  {
+    "archivo": "output/analisis/Base_Analisis_Urdiales_2026-11-17_v2.docx",
+    "copia": "Fuentes_originales/Base_Analisis_Urdiales_2026-11-17_v2.docx",
+    "sha256": "5800b61edf0f101015ab0f7689e53075e767b4ef84c071e9ae93e391d27eda2b"
+  },
+  {
+    "archivo": "diseno/documentacion/Disenos_Urdiales_v1.docx",
+    "copia": "Fuentes_originales/Disenos_Urdiales_v1.docx",
+    "sha256": "acf82815d4519f3ebd45224ab86cbd6c5f1185a91f4cc0d7fd280490ccad6138"
+  }
+]

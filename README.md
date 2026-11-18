@@ -181,6 +181,11 @@ La automatización de GitHub ejecuta estas pruebas y el diagnóstico con Python 
 
 ## Documentación y entregas
 
+- [Documentos organizados conforme a la actividad](docs/entregables/LEEME.md).
+- [E1 Propuesta de servicio](docs/entregables/E1/E1_AlfaConsultora_Propuesta.docx).
+- [E2 Análisis y diseño consolidados](docs/entregables/E2/E2_AlfaConsultora_Analisis_Diseno.docx).
+- [Informe técnico en desarrollo](docs/entregables/E4/PF_AlfaConsultora_Informe.docx).
+- [Inventario de requisitos de entrega y estado](docs/entregables/Inventario_Entregables.csv).
 - [Índice de análisis y diseños](docs/diseno/README.md).
 - [Documento de diseños en Word](docs/diseno/Disenos_Urdiales_v1.docx).
 - [Fuentes editables UML](docs/diseno/uml/).
@@ -189,6 +194,8 @@ La automatización de GitHub ejecuta estas pruebas y el diagnóstico con Python 
 - [Entregables E1–E4](docs/entregables.md).
 
 E2 reúne análisis y diseño; después se integra en el capítulo correspondiente del informe técnico final. El código en GitHub complementa el paquete que exige la guía, incluidos informe, UML editable, manual, presentación y video.
+
+Los documentos originales se mantienen como fuentes. La carpeta `docs/entregables/` concentra la versión organizada para revisión; firmas, implementación completa, aceptación y conclusiones individuales siguen pendientes.
 
 ## Manejo de información
 
