@@ -42,8 +42,14 @@ def main(argv: list[str] | None = None) -> int:
             estado = "Base vacía creada" if creada else "Base existente conservada"
             print(f"{estado}: {config.ruta_bd}")
         else:
-            print("Estructura inicial creada. Los casos de uso están pendientes.")
-    except (OSError, ValueError, sqlite3.Error) as error:
+            try:
+                from urdiales_polizas.interfaz.ventana_principal import iniciar_interfaz
+            except ImportError as error:
+                raise RuntimeError(
+                    "Tkinter no está disponible. Instala el soporte de Tkinter de tu Python."
+                ) from error
+            iniciar_interfaz(config)
+    except (OSError, ValueError, sqlite3.Error, RuntimeError) as error:
         print(f"No se pudo iniciar: {error}", file=sys.stderr)
         return 1
     return 0
