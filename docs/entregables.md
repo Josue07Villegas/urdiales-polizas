@@ -20,6 +20,8 @@ Resumen de la guía Proyecto Integrador de Paradigmas v2 Lite proporcionada al e
 - Al menos 2 secuencias y diagrama de componentes con paradigmas.
 - Matriz RF → caso de uso → clases → archivos Python.
 
+El diseño vigente conserva 11 RF y 5 RNF. La exportación a Excel y las funciones de respaldo y restauración de datos no son obligatorias en la guía y están excluidas del alcance. El video de respaldo de la demostración sí es obligatorio como parte del paquete final.
+
 Los diseños copiados contienen una propuesta de gran parte del diseño, pero no sustituyen las historias completas actualizadas ni la evidencia de entrevista validada.
 
 ## Informe técnico final

@@ -3,7 +3,7 @@
 Versión de trabajo del 17 de noviembre de 2026. Estos diseños son una base para E2 y para el capítulo 3 del informe técnico. No acreditan validación ni firma de la empresa.
 
 - [Documento de diseños en Word](Disenos_Urdiales_v1.docx).
-- [Requerimientos propuestos RF-01 a RF-12](Requerimientos_Diseno.json).
+- [Requerimientos propuestos RF-01 a RF-11](Requerimientos_Diseno.json).
 - [Matriz de trazabilidad propuesta](Matriz_Trazabilidad.csv).
 - [Fuentes editables de los diagramas](uml/).
 - [Imágenes PNG y SVG](imagenes/).
@@ -13,6 +13,8 @@ Versión de trabajo del 17 de noviembre de 2026. Estos diseños son una base par
 ## Cómo interpretar los archivos
 
 Los nombres de módulos en los diagramas y la matriz se resuelven dentro de `src/urdiales_polizas/`. Que un módulo exista como archivo no significa que su caso de uso esté implementado.
+
+Se retiró RF-12 de exportación a Excel. La exportación y las funciones de respaldo y restauración quedan fuera del alcance; permanecen 11 RF y 5 RNF, suficientes para el mínimo de la actividad.
 
 Las fuentes DOT se pueden editar con Graphviz; las secuencias incluyen fuentes PlantUML y SVG editables. Las imágenes y el documento Word corresponden al diseño previo a la implementación. Deben actualizarse cuando se validen o cambien las clases, contratos o relaciones.
 

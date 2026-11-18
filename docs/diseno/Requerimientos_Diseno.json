@@ -1,5 +1,5 @@
 {
-  "version": "1",
+  "version": "1.1",
   "estado": "propuesto para validacion",
   "fecha": "2026-11-17",
   "requerimientos": [
@@ -57,12 +57,11 @@
       "id": "RF-11",
       "descripcion": "Registrar cancelación administrativa e impedir reactivar la póliza cancelada.",
       "prioridad": "M"
-    },
-    {
-      "id": "RF-12",
-      "descripcion": "Exportar registros a Excel. Alcance y prioridad pendientes de confirmar.",
-      "prioridad": "Pendiente"
     }
   ],
-  "nota": "R, C y sus marcas pertenecen al proceso actual. Esta propuesta no los almacena como estados."
+  "exclusiones": [
+    "Exportación a Excel",
+    "Funciones de respaldo y restauración de la base de datos"
+  ],
+  "nota": "R, C y sus marcas pertenecen al proceso actual. Esta propuesta no los almacena como estados. Se retiró RF-12; los 11 RF restantes superan el mínimo académico de 10."
 }

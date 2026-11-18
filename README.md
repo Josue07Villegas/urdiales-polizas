@@ -21,7 +21,9 @@ El objetivo es concentrar la información en una aplicación local pequeña, fac
 - Nueva vigencia al renovar, conservando la anterior en el histórico.
 - Registro manual de cobros y sus estados propuestos: pendiente y pagado.
 
-Las comunicaciones con clientes, campañas, generación de cotizaciones, gráficas y reportes comerciales quedan fuera del alcance acordado. La importación de Excel desde la interfaz está excluida; la exportación a Excel y los respaldos siguen pendientes de confirmar.
+Las comunicaciones con clientes, campañas, generación de cotizaciones, gráficas y reportes comerciales quedan fuera del alcance acordado. También se excluyen la importación de Excel desde la interfaz, la exportación a Excel y las funciones de respaldo y restauración de la base de datos.
+
+Se conservan **11 requerimientos funcionales y 5 no funcionales**. La guía pide al menos 10 funcionales y 5 no funcionales; no hace falta sustituir la exportación con otra función.
 
 **Pendiente académico:** conciliar con el docente la carga/limpieza de archivos y los indicadores que exige la guía. Las exclusiones comerciales no implican una excepción aprobada de la rúbrica.
 

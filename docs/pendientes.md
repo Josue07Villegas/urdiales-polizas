@@ -1,11 +1,13 @@
 # Decisiones y trabajo pendientes
 
+## Decisiones de alcance
+
+La exportación a Excel y las funciones de respaldo y restauración quedan excluidas de esta entrega. Se retira RF-12 y se conservan RF-01 a RF-11; la actividad pide al menos 10 RF y 5 RNF. No se necesita agregar una función para sustituir la exportación.
+
 ## Confirmar con la empresa
 
 | Tema | Qué falta acordar |
 | --- | --- |
-| Exportación a Excel | Si se incluye, qué campos y qué selección exportar |
-| Respaldos | Necesidad, frecuencia, ubicación y recuperación |
 | Anticipación | A qué pólizas y cobros aplica el plazo de 30 días |
 | Días inhábiles | Calendario y ajuste de la fecha de atención, conservando la contractual |
 | Contactos y referentes | Relación, datos opcionales y medios que se necesitan consultar |

@@ -33,8 +33,10 @@ El equipo Alfa Consultora propone una aplicación local pequeña para centraliza
 - Generar cotizaciones o comparar precios de aseguradoras.
 - Crear tableros, gráficas de crecimiento o reportes comerciales.
 - Importar archivos de Excel desde la interfaz del usuario.
+- Exportar registros a Excel.
+- Respaldar y restaurar la base de datos desde el sistema.
 
-La exportación a Excel y los respaldos continúan pendientes. Los requisitos académicos de carga de datos e indicadores se deben conciliar con el docente; consulta [entregables y paradigmas](entregables.md).
+Se conservan RF-01 a RF-11 y cinco RNF; no se requiere una función adicional para alcanzar el mínimo académico. Los requisitos académicos de carga de datos e indicadores se deben conciliar con el docente; consulta [entregables y paradigmas](entregables.md).
 
 ## Estado de esta base
 
