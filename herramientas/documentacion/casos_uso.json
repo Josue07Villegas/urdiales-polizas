@@ -1,0 +1,120 @@
+[
+  [
+    "CU 02 Registrar o editar una póliza",
+    [
+      [
+        "Actor",
+        "Aurora."
+      ],
+      [
+        "Objetivo",
+        "Guardar una póliza de autos o daños vinculada a un asegurado."
+      ],
+      [
+        "Precondiciones",
+        "Asegurado y aseguradora existentes; registros de muestra en la demostración."
+      ],
+      [
+        "Requisitos",
+        "RF-04, RF-05 y RF-11. Incluye CU-08 Validar datos."
+      ]
+    ],
+    [
+      "Aurora selecciona al asegurado e indica tipo de seguro y aseguradora.",
+      "Captura número, inicio, fin y forma de pago de la vigencia.",
+      "Para autos indica individual o flotilla y captura los datos de vehículo o incisos. Para daños registra la descripción del bien.",
+      "El servicio usa PolizaAuto o PolizaDanios mediante la clase base y valida los campos y relaciones.",
+      "El repositorio guarda póliza, vigencia y datos asociados dentro de una transacción.",
+      "La interfaz confirma el registro y permite consultarlo en la cartera."
+    ],
+    [
+      "A1 Edición: se carga la ficha existente, se modifican los campos permitidos y se vuelve a validar.",
+      "A2 Cancelación manual: se solicita confirmación; se conserva la información y se cambia el estado administrativo."
+    ],
+    [
+      "E1 Campos o fechas inválidos: mostrar el motivo sin guardar cambios parciales.",
+      "E2 Reactivación de cancelada: rechazar la operación conforme a la regla documentada.",
+      "E3 Error de almacenamiento: revertir la transacción y permitir reintentar."
+    ],
+    "La póliza conserva asegurado, compañía, vigencia y riesgos correctos. El número alfanumérico y la serie no se convierten a números."
+  ],
+  [
+    "CU 03 Consultar cartera y aplicar filtros",
+    [
+      [
+        "Actor",
+        "Aurora."
+      ],
+      [
+        "Objetivo",
+        "Localizar registros y revisar sus próximas fechas."
+      ],
+      [
+        "Precondiciones",
+        "Base de datos accesible; fecha de referencia disponible."
+      ],
+      [
+        "Requisitos",
+        "RF-06, RF-07 y RF-10. CU-04 extiende la consulta al introducir filtros."
+      ]
+    ],
+    [
+      "La interfaz abre la consulta principal con vigencias no archivadas ni vencidas de pólizas en vigor.",
+      "Si lo necesita, Aurora combina asegurado, compañía, tipo de vencimiento y rango de fechas.",
+      "El servicio valida los filtros y solicita al repositorio una consulta con parámetros.",
+      "El repositorio reúne datos de cliente, aseguradora, póliza, vigencia y próximo cobro pendiente.",
+      "Las reglas identifican los casos de atención y las transformaciones ordenan fechas próximas primero.",
+      "La interfaz muestra los registros y permite abrir la ficha correspondiente."
+    ],
+    [
+      "A1 Sin filtros: mostrar toda la cartera actual con el orden acordado.",
+      "A2 Sin coincidencias: mostrar un mensaje sin resultados y permitir limpiar filtros.",
+      "A3 Histórico: ejecutar CU-05 para consultar vigencias anteriores o vencidas; canceladas según A-04."
+    ],
+    [
+      "E1 Rango invertido o tipo desconocido: pedir corregir el filtro.",
+      "E2 Fallo de lectura: conservar los filtros y mostrar un mensaje para reintentar."
+    ],
+    "La consulta no modifica datos. El tipo todos ordena por la fecha más cercana entre renovación y cobro pendiente; un tipo específico usa su fecha correspondiente."
+  ],
+  [
+    "CU 06 Registrar una renovación",
+    [
+      [
+        "Actor",
+        "Aurora."
+      ],
+      [
+        "Objetivo",
+        "Registrar la nueva vigencia conservando los datos del periodo anterior."
+      ],
+      [
+        "Precondiciones",
+        "Póliza no cancelada y una vigencia de trabajo identificada."
+      ],
+      [
+        "Requisitos",
+        "RF-08. Incluye CU-08 Validar datos y CU-09 Archivar vigencia anterior."
+      ]
+    ],
+    [
+      "Aurora abre la póliza y selecciona registrar renovación.",
+      "El formulario permite revisar número de póliza, nuevas fechas, forma de pago y riesgos.",
+      "El servicio valida la nueva vigencia; si cambia el número se conserva el anterior en su periodo.",
+      "El repositorio inicia una transacción y comprueba que la vigencia anterior sigue siendo la de trabajo.",
+      "Archiva la anterior e inserta la nueva, sus vehículos o incisos y los cobros capturados explícitamente.",
+      "Confirma la transacción y actualiza cartera e histórico."
+    ],
+    [
+      "A1 Mismo número: se conserva el texto del número y se registra un periodo distinto.",
+      "A2 Número diferente: se guarda el nuevo únicamente en la nueva vigencia.",
+      "A3 Datos de riesgo similares: el formulario puede precargar la información anterior para revisión, sin modificarla."
+    ],
+    [
+      "E1 Datos inválidos: no se inicia la escritura.",
+      "E2 Póliza cancelada o renovación ya registrada: detener la operación.",
+      "E3 Fallo de escritura: ejecutar ROLLBACK; la anterior conserva su estado original."
+    ],
+    "La nueva vigencia queda como registro de trabajo y la anterior permanece consultable. El sistema no registra contacto con el cliente ni genera una cotización."
+  ]
+]
