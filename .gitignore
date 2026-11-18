@@ -1,0 +1,38 @@
+# Entornos y archivos generados de Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.coverage
+htmlcov/
+.pytest_cache/
+.ruff_cache/
+
+# Configuración privada, credenciales y bases locales
+.env
+.env.*
+!.env.example
+config.toml
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+datos_locales/*
+!datos_locales/.gitkeep
+
+# Exportaciones, respaldos y documentos de trabajo
+respaldos/
+exportaciones/
+datos_reales/
+output/
+*.log
+~$*
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

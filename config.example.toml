@@ -1,0 +1,11 @@
+# Copiar como config.toml para personalizar la instalación.
+[aplicacion]
+nombre = "Urdiales Asesores | Clientes y pólizas"
+
+[base_datos]
+# Se resuelve respecto a la carpeta de este archivo TOML.
+ruta = "datos_locales/urdiales.sqlite3"
+
+[atencion]
+dias_anticipacion = 30
+# Falta validar a qué pólizas aplica y el calendario de días inhábiles.
