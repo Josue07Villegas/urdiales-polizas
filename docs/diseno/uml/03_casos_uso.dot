@@ -1,0 +1,36 @@
+digraph Diseno {
+graph [bgcolor="white",pad=".25",nodesep=".4",ranksep=".55",fontname="DejaVu Sans",fontsize=15];
+node [fontname="DejaVu Sans",fontsize=14,color="#41505E",penwidth=1.1,style=filled,fillcolor="#F6F8FA",margin=".13,.1"];
+edge [fontname="DejaVu Sans",fontsize=12,color="#566573",arrowsize=.8];
+rankdir=LR;
+Aurora [shape=plaintext,label="«actor»
+Aurora"];
+subgraph cluster_sistema {
+ label="Registro central de clientes y pólizas";color="#AAB7C4";style=rounded;
+ CU01 [shape=ellipse,label="CU-01
+Registrar o editar cliente"];
+ CU02 [shape=ellipse,label="CU-02
+Registrar o editar póliza"];
+ CU03 [shape=ellipse,label="CU-03
+Consultar cartera"];
+ CU04 [shape=ellipse,label="CU-04
+Aplicar filtros"];
+ CU05 [shape=ellipse,label="CU-05
+Consultar histórico"];
+ CU06 [shape=ellipse,label="CU-06
+Registrar renovación"];
+ CU07 [shape=ellipse,label="CU-07
+Actualizar cobro"];
+ CU08 [shape=ellipse,label="CU-08
+Validar datos"];
+ CU09 [shape=ellipse,label="CU-09
+Archivar vigencia anterior"];
+ CU01 -> CU08 [style=dashed,label="«include»"];CU02 -> CU08 [style=dashed,label="«include»"];
+ CU06 -> CU08 [style=dashed,label="«include»"];CU06 -> CU09 [style=dashed,label="«include»"];
+ CU07 -> CU08 [style=dashed,label="«include»"];
+ CU04 -> CU03 [style=dashed,label="«extend»
+[usuario indica filtros]"];
+}
+Aurora -> CU01 [dir=none];Aurora -> CU02 [dir=none];Aurora -> CU03 [dir=none];
+Aurora -> CU05 [dir=none];Aurora -> CU06 [dir=none];Aurora -> CU07 [dir=none];
+}

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1380" height="877" viewBox="0 0 1380 877">
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="none" stroke="#34495e"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<g font-family="DejaVu Sans" fill="#172B3A">
+<text x="30" y="34" font-size="21" font-weight="bold">Consulta y filtros combinados</text>
+<rect x="5" y="55" width="200" height="66" rx="5" fill="#EAF0F5" stroke="#596C7D"/>
+<text x="105" y="82" text-anchor="middle" font-size="19">Aurora</text>
+<line x1="105" y1="121" x2="105" y2="847" stroke="#8A99A6" stroke-dasharray="7 6"/>
+<rect x="235" y="55" width="200" height="66" rx="5" fill="#EAF0F5" stroke="#596C7D"/>
+<text x="335" y="82" text-anchor="middle" font-size="19">Vista</text>
+<text x="335" y="105" text-anchor="middle" font-size="19">Cartera</text>
+<line x1="335" y1="121" x2="335" y2="847" stroke="#8A99A6" stroke-dasharray="7 6"/>
+<rect x="465" y="55" width="200" height="66" rx="5" fill="#EAF0F5" stroke="#596C7D"/>
+<text x="565" y="82" text-anchor="middle" font-size="19">Servicio</text>
+<text x="565" y="105" text-anchor="middle" font-size="19">Consulta</text>
+<line x1="565" y1="121" x2="565" y2="847" stroke="#8A99A6" stroke-dasharray="7 6"/>
+<rect x="695" y="55" width="200" height="66" rx="5" fill="#EAF0F5" stroke="#596C7D"/>
+<text x="795" y="82" text-anchor="middle" font-size="19">Reglas y</text>
+<text x="795" y="105" text-anchor="middle" font-size="19">transformaciones</text>
+<line x1="795" y1="121" x2="795" y2="847" stroke="#8A99A6" stroke-dasharray="7 6"/>
+<rect x="925" y="55" width="200" height="66" rx="5" fill="#EAF0F5" stroke="#596C7D"/>
+<text x="1025" y="82" text-anchor="middle" font-size="19">Repositorio</text>
+<text x="1025" y="105" text-anchor="middle" font-size="19">Cartera</text>
+<line x1="1025" y1="121" x2="1025" y2="847" stroke="#8A99A6" stroke-dasharray="7 6"/>
+<rect x="1155" y="55" width="200" height="66" rx="5" fill="#EAF0F5" stroke="#596C7D"/>
+<text x="1255" y="82" text-anchor="middle" font-size="19">SQLite</text>
+<line x1="1255" y1="121" x2="1255" y2="847" stroke="#8A99A6" stroke-dasharray="7 6"/>
+<rect x="12" y="266" width="1355" height="586" fill="none" stroke="#6E7D89"/>
+<rect x="12" y="266" width="51" height="25" fill="#EEF2F5" stroke="#6E7D89"/>
+<text x="23" y="284" font-size="20">alt</text>
+<text x="78" y="284" font-size="20">[operación válida]</text>
+<line x1="12" y1="714" x2="1367" y2="714" stroke="#6E7D89" stroke-dasharray="6 4"/>
+<text x="25" y="734" font-size="20">[datos inválidos o fallo de almacenamiento]</text>
+<line x1="105" y1="155" x2="335" y2="155" stroke="#34495e" marker-end="url(#arrow)"/>
+<text x="220.0" y="146" text-anchor="middle" font-size="20">Aplicar filtros</text>
+<line x1="335" y1="203" x2="565" y2="203" stroke="#34495e" marker-end="url(#arrow)"/>
+<text x="450.0" y="194" text-anchor="middle" font-size="20">consultar(filtros, hoy)</text>
+<line x1="565" y1="251" x2="795" y2="251" stroke="#34495e" marker-end="url(#arrow)"/>
+<text x="680.0" y="242" text-anchor="middle" font-size="20">validar filtros</text>
+<line x1="565" y1="335" x2="1025" y2="335" stroke="#34495e" marker-end="url(#arrow)"/>
+<text x="795.0" y="326" text-anchor="middle" font-size="20">buscar(filtros, hoy)</text>
+<line x1="1025" y1="383" x2="1255" y2="383" stroke="#34495e" marker-end="url(#arrow)"/>
+<text x="1140.0" y="374" text-anchor="middle" font-size="20">SELECT parametrizado</text>
+<line x1="1255" y1="431" x2="1025" y2="431" stroke="#34495e" stroke-dasharray="7 4" marker-end="url(#arrow)"/>
+<text x="1140.0" y="422" text-anchor="middle" font-size="20">filas relacionadas</text>
+<line x1="1025" y1="479" x2="565" y2="479" stroke="#34495e" stroke-dasharray="7 4" marker-end="url(#arrow)"/>
+<text x="795.0" y="470" text-anchor="middle" font-size="20">datos de cartera</text>
+<line x1="565" y1="527" x2="795" y2="527" stroke="#34495e" marker-end="url(#arrow)"/>
+<text x="680.0" y="518" text-anchor="middle" font-size="20">clasificar y ordenar</text>
+<line x1="795" y1="575" x2="565" y2="575" stroke="#34495e" stroke-dasharray="7 4" marker-end="url(#arrow)"/>
+<text x="680.0" y="566" text-anchor="middle" font-size="20">lista inmutable</text>
+<line x1="565" y1="623" x2="335" y2="623" stroke="#34495e" stroke-dasharray="7 4" marker-end="url(#arrow)"/>
+<text x="450.0" y="614" text-anchor="middle" font-size="20">registros y atención</text>
+<line x1="335" y1="671" x2="105" y2="671" stroke="#34495e" stroke-dasharray="7 4" marker-end="url(#arrow)"/>
+<text x="220.0" y="662" text-anchor="middle" font-size="20">Tabla o sin resultados</text>
+<line x1="565" y1="769" x2="335" y2="769" stroke="#34495e" stroke-dasharray="7 4" marker-end="url(#arrow)"/>
+<text x="450.0" y="760" text-anchor="middle" font-size="20">Mensaje comprensible</text>
+<line x1="335" y1="817" x2="105" y2="817" stroke="#34495e" stroke-dasharray="7 4" marker-end="url(#arrow)"/>
+<text x="220.0" y="808" text-anchor="middle" font-size="20">Corregir / reintentar</text>
+</g></svg>

@@ -1,0 +1,18 @@
+digraph Diseno {
+graph [bgcolor="white",pad=".25",nodesep=".4",ranksep=".55",fontname="DejaVu Sans",fontsize=15];
+node [fontname="DejaVu Sans",fontsize=14,color="#41505E",penwidth=1.1,style=filled,fillcolor="#F6F8FA",margin=".13,.1"];
+edge [fontname="DejaVu Sans",fontsize=12,color="#566573",arrowsize=.8];
+rankdir=TB;
+i [shape=circle,label="",width=.18,fixedsize=true,fillcolor="#172B3A"];
+a [shape=box,style="rounded,filled",label="La empresa emite la póliza"];
+b [shape=box,style="rounded,filled",label="Registrar datos en Excel"];
+c [shape=box,style="rounded,filled",label="Trasladar fechas a Google Calendar"];
+e [shape=box,style="rounded,filled",label="Buscar asegurado, compañía y fechas"];
+f [shape=box,style="rounded,filled",label="Revisar renovación o cobranza"];
+g [shape=diamond,label="¿Se completó?"];
+h [shape=box,style="rounded,filled",label="Actualizar marcas del registro
+R / C, colores, tacha o asterisco"];
+z [shape=doublecircle,label="",width=.18,fixedsize=true,fillcolor="#172B3A"];
+i -> a -> b -> c -> e -> f -> g;
+g -> h [label="[sí]"];g -> e [label="[no / revisión posterior]",constraint=false];h -> z;
+}

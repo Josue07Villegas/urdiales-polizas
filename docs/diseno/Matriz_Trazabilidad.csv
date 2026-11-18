@@ -1,0 +1,13 @@
+﻿RF,Casos de uso,Clases,Modulos propuestos,Paradigmas
+RF-01,CU-01,Asegurado,dominio/clientes.py; aplicacion/servicios.py,POO / estructurado
+RF-02,CU-01,Asegurado,dominio/clientes.py; persistencia/repositorios.py,POO / declarativo
+RF-03,CU-01,"Contacto, MedioContacto",dominio/clientes.py; persistencia/repositorios.py,POO / declarativo
+RF-04,CU-02,"Poliza, PolizaAuto, PolizaDanios",dominio/polizas.py; aplicacion/servicios.py,POO / estructurado
+RF-05,CU-02,"Vigencia, VehiculoAsegurado",dominio/polizas.py; persistencia/repositorios.py,POO / declarativo
+RF-06,"CU-03, CU-05",Vigencia,consultas/transformaciones.py; persistencia/repositorios.py,Funcional / declarativo
+RF-07,"CU-03, CU-04","Asegurado, Vigencia",aplicacion/servicios.py; persistencia/repositorios.py,Estructurado / declarativo
+RF-08,"CU-06, CU-09","Poliza, Vigencia",aplicacion/servicios.py; persistencia/repositorios.py,POO / declarativo
+RF-09,CU-07,Cobro,dominio/cobros.py; persistencia/repositorios.py,POO / declarativo
+RF-10,CU-03,"Vigencia, Cobro",reglas/atencion.py; consultas/transformaciones.py,Lógico / funcional
+RF-11,CU-02,Poliza,dominio/polizas.py; persistencia/repositorios.py,POO / declarativo
+RF-12,Sin asignar,Por definir,No se asigna mientras siga pendiente,Pendiente

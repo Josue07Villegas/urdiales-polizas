@@ -1,0 +1,17 @@
+digraph Diseno {
+graph [bgcolor="white",pad=".25",nodesep=".4",ranksep=".55",fontname="DejaVu Sans",fontsize=15];
+node [fontname="DejaVu Sans",fontsize=14,color="#41505E",penwidth=1.1,style=filled,fillcolor="#F6F8FA",margin=".13,.1"];
+edge [fontname="DejaVu Sans",fontsize=12,color="#566573",arrowsize=.8];
+rankdir=TB;
+A [shape=plain,label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7"><TR><TD BGCOLOR="#E7EEF3"><B>Asegurado</B></TD></TR><TR><TD ALIGN="LEFT">- id: int<BR ALIGN="LEFT"/>- nombre: str<BR ALIGN="LEFT"/></TD></TR><HR/><TR><TD ALIGN="LEFT"> <BR ALIGN="LEFT"/></TD></TR></TABLE>>];
+C [shape=plain,label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7"><TR><TD BGCOLOR="#E7EEF3"><B>Contacto</B></TD></TR><TR><TD ALIGN="LEFT">- id: int<BR ALIGN="LEFT"/>- nombre: str?<BR ALIGN="LEFT"/>- rol: general | referente<BR ALIGN="LEFT"/></TD></TR><HR/><TR><TD ALIGN="LEFT">+ agregar_medio(medio): None<BR ALIGN="LEFT"/></TD></TR></TABLE>>];
+M [shape=plain,label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7"><TR><TD BGCOLOR="#E7EEF3"><B>MedioContacto</B></TD></TR><TR><TD ALIGN="LEFT">- tipo: telefono | correo<BR ALIGN="LEFT"/>- valor: str<BR ALIGN="LEFT"/></TD></TR><HR/><TR><TD ALIGN="LEFT">+ validar(): bool<BR ALIGN="LEFT"/></TD></TR></TABLE>>];
+V [shape=plain,label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7"><TR><TD BGCOLOR="#E7EEF3"><B>Vigencia</B></TD></TR><TR><TD ALIGN="LEFT">- id: int<BR ALIGN="LEFT"/>- fecha_inicio, fecha_fin: date<BR ALIGN="LEFT"/></TD></TR><HR/><TR><TD ALIGN="LEFT"> <BR ALIGN="LEFT"/></TD></TR></TABLE>>];
+X [shape=plain,label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7"><TR><TD BGCOLOR="#E7EEF3"><B>VehiculoAsegurado</B></TD></TR><TR><TD ALIGN="LEFT">- descripcion: str<BR ALIGN="LEFT"/>- modelo: int<BR ALIGN="LEFT"/>- serie: str<BR ALIGN="LEFT"/>- inciso: str?<BR ALIGN="LEFT"/></TD></TR><HR/><TR><TD ALIGN="LEFT">+ validar(): bool<BR ALIGN="LEFT"/></TD></TR></TABLE>>];
+B [shape=plain,label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7"><TR><TD BGCOLOR="#E7EEF3"><B>Cobro</B></TD></TR><TR><TD ALIGN="LEFT">- fecha_vencimiento: date<BR ALIGN="LEFT"/>- _estado: pendiente | pagado<BR ALIGN="LEFT"/></TD></TR><HR/><TR><TD ALIGN="LEFT">+ marcar_pagado(): None<BR ALIGN="LEFT"/></TD></TR></TABLE>>];
+A -> C [dir=both,arrowtail=diamond,arrowhead=none,taillabel="1",headlabel="0..*"];
+C -> M [dir=both,arrowtail=diamond,arrowhead=none,taillabel="1",headlabel="0..*"];
+V -> X [dir=both,arrowtail=diamond,arrowhead=none,taillabel="1",headlabel="0..*",label="solo autos"];
+V -> B [dir=both,arrowtail=diamond,arrowhead=none,taillabel="1",headlabel="0..*"];
+{rank=same;A;V;}{rank=same;C;X;B;}
+}

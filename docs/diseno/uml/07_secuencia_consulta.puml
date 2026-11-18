@@ -1,0 +1,24 @@
+@startuml
+actor "Aurora" as A
+participant "Vista Cartera" as V
+participant "Servicio Consulta" as S
+participant "Reglas y transformaciones" as D
+participant "Repositorio Cartera" as R
+database "SQLite" as DB
+A -> V : Aplicar filtros
+V -> S : consultar(filtros, hoy)
+S -> D : validar filtros
+alt operacion valida
+S -> R : buscar(filtros, hoy)
+R -> DB : SELECT parametrizado
+DB --> R : filas relacionadas
+R --> S : datos de cartera
+S -> D : clasificar y ordenar
+D --> S : lista inmutable
+S --> V : registros y atención
+V --> A : Tabla o sin resultados
+else datos invalidos o fallo de almacenamiento
+S --> V : Mensaje comprensible
+V --> A : Corregir / reintentar
+end
+@enduml

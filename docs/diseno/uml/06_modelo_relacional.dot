@@ -1,0 +1,22 @@
+digraph Diseno {
+graph [bgcolor="white",pad=".25",nodesep=".4",ranksep=".55",fontname="DejaVu Sans",fontsize=15];
+node [fontname="DejaVu Sans",fontsize=14,color="#41505E",penwidth=1.1,style=filled,fillcolor="#F6F8FA",margin=".13,.1"];
+edge [fontname="DejaVu Sans",fontsize=12,color="#566573",arrowsize=.8];
+rankdir=TB;
+asegurados [shape=plain,label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7"><TR><TD BGCOLOR="#E7EEF3"><B>asegurados</B></TD></TR><TR><TD ALIGN="LEFT">PK id<BR ALIGN="LEFT"/>nombre<BR ALIGN="LEFT"/></TD></TR><HR/><TR><TD ALIGN="LEFT"> <BR ALIGN="LEFT"/></TD></TR></TABLE>>];
+contactos [shape=plain,label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7"><TR><TD BGCOLOR="#E7EEF3"><B>contactos</B></TD></TR><TR><TD ALIGN="LEFT">PK id<BR ALIGN="LEFT"/>FK asegurado_id<BR ALIGN="LEFT"/>nombre, rol<BR ALIGN="LEFT"/></TD></TR><HR/><TR><TD ALIGN="LEFT"> <BR ALIGN="LEFT"/></TD></TR></TABLE>>];
+medios_contacto [shape=plain,label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7"><TR><TD BGCOLOR="#E7EEF3"><B>medios_contacto</B></TD></TR><TR><TD ALIGN="LEFT">PK id<BR ALIGN="LEFT"/>FK contacto_id<BR ALIGN="LEFT"/>tipo, valor<BR ALIGN="LEFT"/></TD></TR><HR/><TR><TD ALIGN="LEFT"> <BR ALIGN="LEFT"/></TD></TR></TABLE>>];
+aseguradoras [shape=plain,label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7"><TR><TD BGCOLOR="#E7EEF3"><B>aseguradoras</B></TD></TR><TR><TD ALIGN="LEFT">PK id<BR ALIGN="LEFT"/>nombre<BR ALIGN="LEFT"/></TD></TR><HR/><TR><TD ALIGN="LEFT"> <BR ALIGN="LEFT"/></TD></TR></TABLE>>];
+polizas [shape=plain,label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7"><TR><TD BGCOLOR="#E7EEF3"><B>polizas</B></TD></TR><TR><TD ALIGN="LEFT">PK id<BR ALIGN="LEFT"/>FK asegurado_id<BR ALIGN="LEFT"/>FK aseguradora_id<BR ALIGN="LEFT"/>tipo, estado, riesgo<BR ALIGN="LEFT"/></TD></TR><HR/><TR><TD ALIGN="LEFT"> <BR ALIGN="LEFT"/></TD></TR></TABLE>>];
+vigencias [shape=plain,label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7"><TR><TD BGCOLOR="#E7EEF3"><B>vigencias</B></TD></TR><TR><TD ALIGN="LEFT">PK id<BR ALIGN="LEFT"/>FK poliza_id<BR ALIGN="LEFT"/>FK renueva_a_id?<BR ALIGN="LEFT"/>numero, inicio, fin<BR ALIGN="LEFT"/>forma_pago, archivada<BR ALIGN="LEFT"/></TD></TR><HR/><TR><TD ALIGN="LEFT"> <BR ALIGN="LEFT"/></TD></TR></TABLE>>];
+vehiculos_asegurados [shape=plain,label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7"><TR><TD BGCOLOR="#E7EEF3"><B>vehiculos_asegurados</B></TD></TR><TR><TD ALIGN="LEFT">PK id<BR ALIGN="LEFT"/>FK vigencia_id<BR ALIGN="LEFT"/>descripcion, modelo<BR ALIGN="LEFT"/>serie, inciso?<BR ALIGN="LEFT"/></TD></TR><HR/><TR><TD ALIGN="LEFT"> <BR ALIGN="LEFT"/></TD></TR></TABLE>>];
+cobros [shape=plain,label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7"><TR><TD BGCOLOR="#E7EEF3"><B>cobros</B></TD></TR><TR><TD ALIGN="LEFT">PK id<BR ALIGN="LEFT"/>FK vigencia_id<BR ALIGN="LEFT"/>fecha_vencimiento<BR ALIGN="LEFT"/>estado<BR ALIGN="LEFT"/></TD></TR><HR/><TR><TD ALIGN="LEFT"> <BR ALIGN="LEFT"/></TD></TR></TABLE>>];
+asegurados -> contactos [dir=none,label="1 : 0..*"];
+contactos -> medios_contacto [dir=none,label="1 : 0..*"];
+asegurados -> polizas [dir=none,label="1 : 0..*"];
+aseguradoras -> polizas [dir=none,label="1 : 0..*"];
+polizas -> vigencias [dir=none,label="1 : 1..*"];
+vigencias -> vehiculos_asegurados [dir=none,label="1 : 0..*"];
+vigencias -> cobros [dir=none,label="1 : 0..*"];
+vigencias -> vigencias [label="anterior / sucesora\n0..1 : 0..1",style=dashed];
+}

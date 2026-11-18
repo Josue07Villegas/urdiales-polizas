@@ -1,0 +1,17 @@
+digraph Diseno {
+graph [bgcolor="white",pad=".25",nodesep=".4",ranksep=".55",fontname="DejaVu Sans",fontsize=15];
+node [fontname="DejaVu Sans",fontsize=14,color="#41505E",penwidth=1.1,style=filled,fillcolor="#F6F8FA",margin=".13,.1"];
+edge [fontname="DejaVu Sans",fontsize=12,color="#566573",arrowsize=.8];
+rankdir=TB;
+A [shape=plain,label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7"><TR><TD BGCOLOR="#E7EEF3"><B>Asegurado</B></TD></TR><TR><TD ALIGN="LEFT">- id: int<BR ALIGN="LEFT"/>- nombre: str<BR ALIGN="LEFT"/></TD></TR><HR/><TR><TD ALIGN="LEFT">+ cambiar_nombre(str): None<BR ALIGN="LEFT"/></TD></TR></TABLE>>];
+S [shape=plain,label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7"><TR><TD BGCOLOR="#E7EEF3"><B>Aseguradora</B></TD></TR><TR><TD ALIGN="LEFT">- id: int<BR ALIGN="LEFT"/>- nombre: str<BR ALIGN="LEFT"/></TD></TR><HR/><TR><TD ALIGN="LEFT"> <BR ALIGN="LEFT"/></TD></TR></TABLE>>];
+P [shape=plain,label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7"><TR><TD BGCOLOR="#E7EEF3"><I>Poliza</I><BR/>&lt;&lt;abstracta&gt;&gt;</TD></TR><TR><TD ALIGN="LEFT">- id: int<BR ALIGN="LEFT"/>- _estado: EstadoPoliza<BR ALIGN="LEFT"/>+ estado: EstadoPoliza {property}<BR ALIGN="LEFT"/></TD></TR><HR/><TR><TD ALIGN="LEFT">+ cancelar(): None<BR ALIGN="LEFT"/>+ validar_riesgo(vigencia): bool<BR ALIGN="LEFT"/></TD></TR></TABLE>>];
+PA [shape=plain,label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7"><TR><TD BGCOLOR="#E7EEF3"><B>PolizaAuto</B></TD></TR><TR><TD ALIGN="LEFT">- modalidad: individual | flotilla<BR ALIGN="LEFT"/></TD></TR><HR/><TR><TD ALIGN="LEFT">+ validar_riesgo(vigencia): bool<BR ALIGN="LEFT"/></TD></TR></TABLE>>];
+PD [shape=plain,label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7"><TR><TD BGCOLOR="#E7EEF3"><B>PolizaDanios</B></TD></TR><TR><TD ALIGN="LEFT">- descripcion_riesgo: str<BR ALIGN="LEFT"/></TD></TR><HR/><TR><TD ALIGN="LEFT">+ validar_riesgo(vigencia): bool<BR ALIGN="LEFT"/></TD></TR></TABLE>>];
+V [shape=plain,label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7"><TR><TD BGCOLOR="#E7EEF3"><B>Vigencia</B></TD></TR><TR><TD ALIGN="LEFT">- numero_poliza: str<BR ALIGN="LEFT"/>- fecha_inicio, fecha_fin: date<BR ALIGN="LEFT"/>- forma_pago: FormaPago<BR ALIGN="LEFT"/>- archivada: bool<BR ALIGN="LEFT"/></TD></TR><HR/><TR><TD ALIGN="LEFT">+ archivar(): None<BR ALIGN="LEFT"/>+ esta_vencida(hoy): bool<BR ALIGN="LEFT"/></TD></TR></TABLE>>];
+A -> P [dir=none,taillabel="1",headlabel="0..*",label="titular"];
+S -> P [dir=none,taillabel="1",headlabel="0..*",label="emite"];
+P -> PA [dir=back,arrowtail=empty,label="herencia"];P -> PD [dir=back,arrowtail=empty];
+P -> V [dir=both,arrowtail=diamond,arrowhead=none,taillabel="1",headlabel="1..*",label="conserva"];
+{rank=same;A;S;}{rank=same;PA;PD;V;}
+}

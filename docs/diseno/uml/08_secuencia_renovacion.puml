@@ -1,0 +1,26 @@
+@startuml
+actor "Aurora" as A
+participant "Formulario Renovación" as V
+participant "Servicio Pólizas" as S
+participant "Poliza Auto o Daños" as D
+participant "Repositorio Pólizas" as R
+database "SQLite" as DB
+A -> V : Confirmar nueva vigencia
+V -> S : renovar(id, datos)
+S -> D : validar riesgo y fechas
+alt operacion valida
+S -> R : renovar en transacción
+R -> DB : BEGIN IMMEDIATE
+R -> DB : Archivar anterior
+R -> DB : INSERT nueva vigencia
+R -> DB : Riesgos y cobros explícitos
+R -> DB : COMMIT
+R --> S : nueva vigencia
+S --> V : Actualizar consulta
+V --> A : Confirmación
+else datos invalidos o fallo de almacenamiento
+R -> DB : ROLLBACK si se inició
+S --> V : Error; conservar anterior
+V --> A : Corregir / reintentar
+end
+@enduml

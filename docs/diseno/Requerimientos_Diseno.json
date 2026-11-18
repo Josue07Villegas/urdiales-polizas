@@ -1,0 +1,68 @@
+{
+  "version": "1",
+  "estado": "propuesto para validacion",
+  "fecha": "2026-11-17",
+  "requerimientos": [
+    {
+      "id": "RF-01",
+      "descripcion": "Registrar un asegurado y recuperar su ficha.",
+      "prioridad": "M"
+    },
+    {
+      "id": "RF-02",
+      "descripcion": "Editar datos del asegurado conservando sus relaciones.",
+      "prioridad": "M"
+    },
+    {
+      "id": "RF-03",
+      "descripcion": "Mantener contactos con varios teléfonos y correos opcionales.",
+      "prioridad": "M"
+    },
+    {
+      "id": "RF-04",
+      "descripcion": "Registrar y editar pólizas de autos o daños con datos comunes y específicos.",
+      "prioridad": "M"
+    },
+    {
+      "id": "RF-05",
+      "descripcion": "Vincular un vehículo individual o varios incisos a cada vigencia de autos.",
+      "prioridad": "M"
+    },
+    {
+      "id": "RF-06",
+      "descripcion": "Consultar cartera actual con fechas más próximas primero e histórico separado.",
+      "prioridad": "M"
+    },
+    {
+      "id": "RF-07",
+      "descripcion": "Combinar asegurado, aseguradora, fechas y tipo de vencimiento en los filtros.",
+      "prioridad": "M"
+    },
+    {
+      "id": "RF-08",
+      "descripcion": "Registrar nueva vigencia y conservar la anterior en una misma transacción.",
+      "prioridad": "M"
+    },
+    {
+      "id": "RF-09",
+      "descripcion": "Registrar cobros y actualizar manualmente pendiente o pagado.",
+      "prioridad": "M"
+    },
+    {
+      "id": "RF-10",
+      "descripcion": "Derivar atención por fechas con 30 días de anticipación en los casos aplicables.",
+      "prioridad": "M"
+    },
+    {
+      "id": "RF-11",
+      "descripcion": "Registrar cancelación administrativa e impedir reactivar la póliza cancelada.",
+      "prioridad": "M"
+    },
+    {
+      "id": "RF-12",
+      "descripcion": "Exportar registros a Excel. Alcance y prioridad pendientes de confirmar.",
+      "prioridad": "Pendiente"
+    }
+  ],
+  "nota": "R, C y sus marcas pertenecen al proceso actual. Esta propuesta no los almacena como estados."
+}

@@ -1,0 +1,34 @@
+digraph Diseno {
+graph [bgcolor="white",pad=".25",nodesep=".4",ranksep=".55",fontname="DejaVu Sans",fontsize=15];
+node [fontname="DejaVu Sans",fontsize=14,color="#41505E",penwidth=1.1,style=filled,fillcolor="#F6F8FA",margin=".13,.1"];
+edge [fontname="DejaVu Sans",fontsize=12,color="#566573",arrowsize=.8];
+rankdir=TB;node [shape=component];
+ui [label="interfaz/
+Formularios y tabla
+Estructurado"];
+app [label="aplicacion/servicios.py
+Coordina casos de uso
+Estructurado"];
+dom [label="dominio/
+Pólizas, vigencias y cobros
+Orientado a objetos"];
+reg [label="reglas/atencion.py
+Consultas de fechas
+Lógico"];
+fun [label="consultas/transformaciones.py
+Clasificar y ordenar
+Funcional"];
+rep [label="persistencia/repositorios.py
+SQL con parámetros
+Declarativo"];
+db [shape=cylinder,label="SQLite local
+Datos y relaciones"];
+cfg [shape=note,label="config.toml
+Anticipación: 30 días"];
+demo [style="dashed,filled",label="datos/carga_demo.py
+Carga y limpieza
+Imperativo · por conciliar"];
+ui -> app;app -> dom;app -> reg;app -> fun;app -> rep;reg -> dom;rep -> db;
+cfg -> reg [style=dashed];demo -> rep [style=dashed];
+{rank=same;dom;reg;fun;rep;}
+}

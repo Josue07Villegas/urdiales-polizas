@@ -1,0 +1,24 @@
+digraph Diseno {
+graph [bgcolor="white",pad=".25",nodesep=".4",ranksep=".55",fontname="DejaVu Sans",fontsize=15];
+node [fontname="DejaVu Sans",fontsize=14,color="#41505E",penwidth=1.1,style=filled,fillcolor="#F6F8FA",margin=".13,.1"];
+edge [fontname="DejaVu Sans",fontsize=12,color="#566573",arrowsize=.8];
+rankdir=TB;
+i [shape=circle,label="",width=.18,fixedsize=true,fillcolor="#172B3A"];
+a [shape=box,style="rounded,filled",label="Abrir cartera e indicar filtros"];
+b [shape=box,style="rounded,filled",label="Consultar datos persistidos"];
+c [shape=box,style="rounded,filled",label="Derivar próximas fechas
+y ordenar de menor a mayor"];
+e [shape=box,style="rounded,filled",label="Mostrar registros y motivo de atención"];
+f [shape=diamond,label="Acción de Aurora"];
+g [shape=box,style="rounded,filled",label="Editar ficha, póliza o cobro"];
+h [shape=box,style="rounded,filled",label="Registrar nueva vigencia"];
+j [shape=box,style="rounded,filled",label="Validar campos y relaciones"];
+k [shape=diamond,label="¿Datos válidos?"];
+l [shape=box,style="rounded,filled",label="Mostrar corrección necesaria"];
+m [shape=box,style="rounded,filled",label="Guardar en transacción
+Conservar anterior si se renueva"];
+z [shape=doublecircle,label="",width=.18,fixedsize=true,fillcolor="#172B3A"];
+i -> a -> b -> c -> e -> f;f -> g [label="[editar]"];f -> h [label="[renovar]"];f -> z [label="[terminar]"];
+g -> j;h -> j;j -> k;k -> l [label="[no]"];l -> j [label="[corregir]",constraint=false];
+k -> m [label="[sí]"];m -> b [label="[actualizar vista]",constraint=false];
+}
