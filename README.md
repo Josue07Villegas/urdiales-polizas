@@ -181,21 +181,23 @@ La automatización de GitHub ejecuta estas pruebas y el diagnóstico con Python 
 
 ## Documentación y entregas
 
-- [Documentos organizados conforme a la actividad](docs/entregables/LEEME.md).
-- [E1 Propuesta de servicio](docs/entregables/E1/E1_AlfaConsultora_Propuesta.docx).
-- [E2 Análisis y diseño consolidados](docs/entregables/E2/E2_AlfaConsultora_Analisis_Diseno.docx).
-- [Informe técnico en desarrollo](docs/entregables/E4/PF_AlfaConsultora_Informe.docx).
-- [Inventario de requisitos de entrega y estado](docs/entregables/Inventario_Entregables.csv).
+- [Índice del paquete final de cinco elementos](docs/entrega_final/LEEME.md).
+- [Informe técnico único en Word](docs/entrega_final/PF_AlfaConsultora_Informe.docx).
+- [Informe técnico en PDF con todos los anexos](docs/entrega_final/PF_AlfaConsultora_Informe.pdf).
+- [Manual de usuario independiente](docs/entrega_final/PF_AlfaConsultora_Manual.docx).
+- [Inventario de contenido y estado](docs/entrega_final/Inventario_Entrega.csv).
 - [Índice de análisis y diseños](docs/diseno/README.md).
 - [Documento de diseños en Word](docs/diseno/Disenos_Urdiales_v1.docx).
 - [Fuentes editables UML](docs/diseno/uml/).
 - [Matriz de trazabilidad](docs/diseno/Matriz_Trazabilidad.csv).
 - [Guía de contribución y commits](CONTRIBUTING.md).
-- [Entregables E1–E4](docs/entregables.md).
+- [Entrega final y etapas de trabajo](docs/entregables.md).
 
-E2 reúne análisis y diseño; después se integra en el capítulo correspondiente del informe técnico final. El código en GitHub complementa el paquete que exige la guía, incluidos informe, UML editable, manual, presentación y video.
+La entrega tiene cinco elementos: informe, presentación, diagramas, código y manual. El video se canceló por indicación del equipo el 19/11/2026. E1–E4 organizan avances y responsabilidades; el análisis y el diseño se integran en un único informe autocontenido, también en Word.
 
-Los documentos originales se mantienen como fuentes. La carpeta `docs/entregables/` concentra la versión organizada para revisión; firmas, implementación completa, aceptación y conclusiones individuales siguen pendientes.
+La versión vigente está en `docs/entrega_final/`; firmas, implementación completa, aceptación y conclusiones individuales siguen pendientes. La organización anterior y los originales se conservan en `docs/historial/2026-11-17_entregables/`.
+
+La priorización MoSCoW propuesta mantiene once RF: ocho Must y tres Should; añade una mejora opcional Could de colores por aseguradora y registra seis exclusiones Won’t. Los Should siguen previstos en el proyecto y su prioridad debe validarse con la empresa.
 
 ## Manejo de información
 

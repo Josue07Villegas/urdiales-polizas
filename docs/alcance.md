@@ -38,6 +38,8 @@ El equipo Alfa Consultora propone una aplicación local pequeña para centraliza
 
 Se conservan RF-01 a RF-11 y cinco RNF; no se requiere una función adicional para alcanzar el mínimo académico. Los requisitos académicos de carga de datos e indicadores se deben conciliar con el docente; consulta [entregables y paradigmas](entregables.md).
 
+La priorización propuesta es ocho RF Must y tres Should (RF-03, RF-09 y RF-11). Se prevé completar ambos grupos; Should establece una secuencia y no elimina compromisos de alcance. OP-01 Could es el uso opcional de colores por aseguradora acompañados de texto. Las exclusiones anteriores se identifican como EX-01 a EX-06 Won’t de esta versión. Debe validarse esta priorización con la empresa.
+
 ## Estado de esta base
 
 Se puede comprobar la configuración, inicializar una base SQLite vacía y abrir una ventana inicial. Las funciones previstas de captura, filtros, renovación, histórico y avisos todavía no están conectadas ni implementadas como casos de uso.

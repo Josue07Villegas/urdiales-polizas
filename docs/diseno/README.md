@@ -1,6 +1,8 @@
 # Análisis y diseño propuestos
 
-El contenido consolidado según la actividad está en [E2](../entregables/E2/E2_AlfaConsultora_Analisis_Diseno.docx). Esta carpeta conserva las fuentes de los diseños y su catálogo inicial; consulta el [índice de entregables](../entregables/LEEME.md) para la organización vigente.
+El contenido consolidado está dentro del [informe técnico único](../entrega_final/PF_AlfaConsultora_Informe.docx), secciones 3 y 4 y anexos A a E. Esta carpeta conserva las fuentes editables; consulta el [índice de entrega](../entrega_final/LEEME.md) para la organización vigente.
+
+El catálogo JSON del 19/11/2026 propone ocho RF Must y tres Should, una mejora Could y seis exclusiones Won’t. El Word de diseños del 17/11/2026 se conserva como fuente histórica; sus prioridades antiguas no sustituyen las del informe vigente.
 
 Versión de trabajo del 17 de noviembre de 2026. Estos diseños son una base para E2 y para el capítulo 3 del informe técnico. No acreditan validación ni firma de la empresa.
 

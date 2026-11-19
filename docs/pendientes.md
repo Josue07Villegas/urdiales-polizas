@@ -27,7 +27,7 @@ El esquema incluye decisiones de diseño propuestas. No se presentan como una ap
 
 ## Orden propuesto de desarrollo
 
-1. Validar E2: requerimientos, historias de usuario, diagramas y trazabilidad.
+1. Validar el análisis del informe técnico: requerimientos, MoSCoW propuesto, historias, diagramas y trazabilidad.
 2. Implementar entidades, contactos y repositorios con altas y edición.
 3. Implementar pólizas de autos y daños y sus vigencias.
 4. Conectar cartera, filtros combinables y orden por proximidad.

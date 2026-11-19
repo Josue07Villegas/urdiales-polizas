@@ -1,0 +1,16 @@
+﻿Elemento,Contenido,Ubicación,Estado
+Informe,Contexto y alcance,Sección 1,Integrado
+Informe,Marco teórico y referencias,Sección 2 y Referencias,"Siete fuentes técnicas y académicas, incluidas dos académicas"
+Informe,11 RF y 5 RNF con MoSCoW,Secciones 3 1 a 3 3,Priorización propuesta para validación
+Informe,Seis historias y doce criterios DCT,Sección 3 4 y Anexo C,Especificados
+Informe,UML y trazabilidad,Secciones 3 5 a 3 7 y Anexo A,Diseño propuesto; alinear con la implementación
+Informe,Tres casos de uso completos,Anexo D,Especificados
+Informe,Reglas y datos,Anexo B,Validar puntos abiertos
+Informe,Arquitectura y seis fichas,Sección 4,Dos fichas parciales y cuatro pendientes de código real
+Informe,Aceptación y evidencias,Sección 5 y Anexo E,Cinco escenarios no ejecutados; faltan capturas
+Informe,Conclusiones,Sección 6,Conclusiones individuales sin IA pendientes
+Informe,Entrevista minuta carta e IA,Anexos F a H,Firmas y revisión humana pendientes
+Presentación,Hasta 15 diapositivas,Guion del Anexo I,Diapositivas pendientes
+Diagramas,Fuentes e imágenes,PF_AlfaConsultora_UML.zip,Preparados como diseño
+Código,Python y datos de muestra,Repositorio,Casos completos y 300 registros pendientes
+Manual,Tres a seis páginas,PF_AlfaConsultora_Manual,Manual inicial; capturas pendientes

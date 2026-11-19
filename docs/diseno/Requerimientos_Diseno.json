@@ -1,7 +1,7 @@
 {
-  "version": "1.1",
-  "estado": "propuesto para validacion",
-  "fecha": "2026-11-17",
+  "version": "1.2",
+  "estado": "priorizacion propuesta para validacion",
+  "fecha": "2026-11-19",
   "requerimientos": [
     {
       "id": "RF-01",
@@ -16,7 +16,8 @@
     {
       "id": "RF-03",
       "descripcion": "Mantener contactos con varios teléfonos y correos opcionales.",
-      "prioridad": "M"
+      "prioridad": "S",
+      "justificacion_prioridad": "Los medios múltiples complementan el registro central; mientras se termina esta función pueden consultarse en el control existente."
     },
     {
       "id": "RF-04",
@@ -46,7 +47,8 @@
     {
       "id": "RF-09",
       "descripcion": "Registrar cobros y actualizar manualmente pendiente o pagado.",
-      "prioridad": "M"
+      "prioridad": "S",
+      "justificacion_prioridad": "La cobranza manual es importante; la consulta de clientes, pólizas y renovaciones sigue siendo útil mientras se conserva el cobro en el control actual."
     },
     {
       "id": "RF-10",
@@ -56,12 +58,54 @@
     {
       "id": "RF-11",
       "descripcion": "Registrar cancelación administrativa e impedir reactivar la póliza cancelada.",
-      "prioridad": "M"
+      "prioridad": "S",
+      "justificacion_prioridad": "La cancelación administrativa requiere definición adicional. Mientras se valida, no se habilita reactivación ni se presume cancelación automática."
     }
   ],
   "exclusiones": [
     "Exportación a Excel",
     "Funciones de respaldo y restauración de la base de datos"
   ],
-  "nota": "R, C y sus marcas pertenecen al proceso actual. Esta propuesta no los almacena como estados. Se retiró RF-12; los 11 RF restantes superan el mínimo académico de 10."
+  "nota": "Se mantienen RF-01 a RF-11: ocho Must y tres Should propuestos. Should expresa orden de atención y no elimina acuerdos con la empresa. OP-01 es una mejora Could; las exclusiones se registran como Won’t de esta versión. R/C y sus marcas describen el proceso actual. RF-12 continúa retirado. El video fue cancelado por indicación del equipo el 19/11/2026.",
+  "opcionales": [
+    {
+      "id": "OP-01",
+      "descripcion": "Distinguir aseguradoras mediante colores acompañados de su nombre.",
+      "prioridad": "C",
+      "relacion": "RF-06, RNF-03",
+      "justificacion": "Apoyo visual mencionado en el levantamiento. El nombre y los filtros permiten consultar sin esta mejora; no reproduce las marcas R/C."
+    }
+  ],
+  "fuera_de_version": [
+    {
+      "id": "EX-01",
+      "descripcion": "Generar cotizaciones o comparar precios de seguros.",
+      "prioridad": "W"
+    },
+    {
+      "id": "EX-02",
+      "descripcion": "Contactar clientes, enviar correos o mensajes y administrar campañas.",
+      "prioridad": "W"
+    },
+    {
+      "id": "EX-03",
+      "descripcion": "Generar reportes comerciales, tableros o gráficas de crecimiento.",
+      "prioridad": "W"
+    },
+    {
+      "id": "EX-04",
+      "descripcion": "Importar Excel desde la interfaz.",
+      "prioridad": "W"
+    },
+    {
+      "id": "EX-05",
+      "descripcion": "Exportar registros a Excel.",
+      "prioridad": "W"
+    },
+    {
+      "id": "EX-06",
+      "descripcion": "Respaldar o restaurar la base de datos desde el sistema.",
+      "prioridad": "W"
+    }
+  ]
 }
