@@ -69,7 +69,7 @@
     [
       "A1 Sin filtros: mostrar toda la cartera actual con el orden acordado.",
       "A2 Sin coincidencias: mostrar un mensaje sin resultados y permitir limpiar filtros.",
-      "A3 Histórico: ejecutar CU-05 para consultar vigencias anteriores o vencidas; canceladas según A-04."
+      "A3 Histórico: ejecutar CU-05 para consultar vigencias anteriores o vencidas; canceladas según el pendiente P-03."
     ],
     [
       "E1 Rango invertido o tipo desconocido: pedir corregir el filtro.",

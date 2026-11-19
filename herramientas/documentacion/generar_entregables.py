@@ -657,8 +657,7 @@ Se usa AlfaConsultora como identificador a petición del equipo. Confirmar la no
 
 
 if __name__=='__main__':
-    OUT.mkdir(parents=True,exist_ok=True)
-    propuesta();analisis();informe();manual();resumen();bitacora();acta();guion_entrevista();guion_entregas()
-    copiar_fuentes();indice()
-    (OUT/'Documentos_Generados.json').write_text(json.dumps([str(p.relative_to(OUT)) for p in ARCHIVOS],ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-    print('Generados',len(ARCHIVOS),'documentos editables. Falta renderizar y revisar antes de entregar.')
+    # La entrada vigente genera un único informe autocontenido. Se conservan
+    # los componentes reutilizables y las funciones históricas como referencia.
+    from generar_informe_unico import main
+    main()

@@ -1,11 +1,13 @@
-# Generación de los documentos
+# Documentación de la solución
 
-Los documentos de `docs/entregables/` organizan el avance conforme a la actividad. Los generadores utilizan Python con `python-docx`, Pillow y pypdf; son herramientas documentales y no dependencias de la aplicación.
+La entrada vigente es `generar_informe_unico.py`. Produce un informe técnico completo, con todos los anexos dentro del Word, y un manual independiente en `docs/entrega_final/`. E1–E4 son etapas para organizar avances; no generan informes finales independientes. El video fue cancelado por indicación del equipo el 19/11/2026.
 
-1. Revisar `contenido.py`, `casos_uso.json` y los requisitos vigentes en `docs/diseno/`. Ajustar el contenido a los acuerdos confirmados.
-2. Ejecutar `generar_entregables.py` con el entorno documental. Regenera nueve Word, el inventario, el índice y el paquete UML; conserva las copias originales cuando no está disponible la carpeta de trabajo externa.
-3. Renderizar todos los Word modificados con el renderer documental y la opción de generar PDF. Revisar visualmente cada página y corregir antes de continuar. El Word y su PDF deben corresponder a la misma versión.
-4. Ejecutar `consolidar_pdfs.py --render-dir RUTA_RENDER` con los PDF revisados. Puede repetirse el argumento: la última coincidencia tiene prioridad. El script copia los nueve PDF e integra seis anexos en el informe, con marcadores de navegación.
-5. Comprobar que las firmas y resultados pendientes conserven su estado real y actualizar los documentos al cerrar el proyecto.
+## Actualización
 
-El informe actual tiene 21 páginas de cuerpo, una de índice de anexos y 35 de anexos. Su Word mantiene los anexos en archivos separados para facilitar la edición. Las fuentes originales no se reemplazan por los documentos consolidados.
+1. Ajustar `contenido.py`, `casos_uso.json`, el catálogo y la matriz de `docs/diseno/` a los acuerdos confirmados. El catálogo contiene ocho RF Must, tres Should, una mejora Could y seis exclusiones Won’t como propuesta para validación.
+2. Ejecutar `generar_informe_unico.py` con el entorno documental de Python que incluya python-docx y Pillow. `generar_entregables.py` redirige a la misma entrada y conserva componentes de formato y contenido reutilizables.
+3. Renderizar los dos Word con la herramienta documental y generar sus PDF. Inspeccionar visualmente todas las páginas y corregir cualquier defecto. El informe debe mantener de 15 a 25 páginas de cuerpo, antes de los anexos.
+4. Ejecutar `consolidar_pdfs.py --render-dir RUTA_RENDER` con pypdf disponible. Copia los PDF revisados sin concatenar informes ni añadir anexos externos. Se puede repetir el argumento para dar prioridad a un render posterior; cada directorio debe contener una sola coincidencia por nombre de PDF.
+5. Revisar el inventario, las firmas, las capturas y los resultados antes de preparar el paquete de cinco elementos. El generador no crea una presentación ni un sistema terminado.
+
+La fuente del informe y la del manual corresponden al mismo contenido en Word y PDF. La organización documental del 17/11/2026 y los originales se conservan en `docs/historial/2026-11-17_entregables/`. No utilizar sus prioridades antiguas como versión vigente.

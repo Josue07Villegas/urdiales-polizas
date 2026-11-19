@@ -1,6 +1,6 @@
 """Contenido común de los entregables académicos; versión de trabajo del equipo."""
 
-FECHA = '17 de noviembre de 2026'
+FECHA = '19 de noviembre de 2026'
 EQUIPO = [
     ('Josue Abel Villegas Garcia', '747198'),
     ('Scarlett Alvarado Urdiales', '738933'),
